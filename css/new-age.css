@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -54,7 +54,7 @@ p {
 
 section {
   padding: 100px 0;
-  background-color: #292929;
+  background-color: #1a1c22;
 }
 
 section h2 {
@@ -66,14 +66,14 @@ section h2 {
   background-color: #1e2026;
   -webkit-transition: all .35s;
   transition: all .35s;
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand {
   color: #00fff7;
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -261,12 +261,11 @@ section.features .device-container {
 
 section.download .card {
   border: 0;
-  border-bottom: .25rem solid #9100ff;
 }
 
 section.features .feature-item {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -280,12 +279,19 @@ section.features .feature-item-hover {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(46, 46, 46, 0.9);
-
+  background: rgba(46, 46, 46, .95);
 }
 
 section.features .feature-item-hover:hover {
   opacity: 1
+}
+
+section.features .feature-item-hover .feature-item-pad {
+  padding-top: 60px;
+}
+
+section.features .feature-item h2 {
+  color: white;
 }
 
 section.features .feature-item .feature-item-hover h1 {
@@ -294,97 +300,27 @@ section.features .feature-item .feature-item-hover h1 {
 
 section.features .feature-item h1 {
   font-size: 40px;
-  background: -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-  background: linear-gradient(to left, #7b4397, #dc2430); 
+  background: -webkit-gradient(linear, right top, left top, from(#690b97), to(#ff1979));
+  background: linear-gradient(to left, #690b97, #ff1979); 
    -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-section.cta {
-  position: relative;
-  padding: 250px 0;
-  background-image: url("../img/bg-cta.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-section.cta .cta-content {
-  position: relative;
-  z-index: 1;
-}
-
-section.cta .cta-content h2 {
-  font-size: 50px;
-  max-width: 450px;
-  margin-top: 0;
-  margin-bottom: 25px;
-  color: white;
-}
-
-@media (min-width: 768px) {
-  section.cta .cta-content h2 {
-    font-size: 80px;
-  }
-}
-
-section.cta .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-section.contact {
+section.about {
   text-align: center;
+  background: white;
 }
 
-section.contact h2 {
+section.about h2 {
   margin-top: 0;
   margin-bottom: 25px;
 }
 
-section.contact h2 i {
-  color: #dd4b39;
-}
-
-section.contact ul.list-social {
-  margin-bottom: 0;
-}
-
-section.contact ul.list-social li a {
-  font-size: 40px;
-  line-height: 80px;
-  display: block;
-  width: 80px;
-  height: 80px;
-  color: white;
-  border-radius: 100%;
-}
-
-section.contact ul.list-social li.social-twitter a {
-  background-color: #1da1f2;
-}
-
-section.contact ul.list-social li.social-twitter a:hover {
-  background-color: #0d95e8;
-}
-
-section.contact ul.list-social li.social-facebook a {
-  background-color: #3b5998;
-}
-
-section.contact ul.list-social li.social-facebook a:hover {
-  background-color: #344e86;
-}
-
-section.contact ul.list-social li.social-google-plus a {
-  background-color: #dd4b39;
-}
-
-section.contact ul.list-social li.social-google-plus a:hover {
-  background-color: #d73925;
+section.about ul li {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 20px;
+  padding-bottom: 8px;
 }
 
 footer {
@@ -448,4 +384,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .btn-xl {
   font-size: 11px;
   padding: 15px 45px;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.5)!important;
 }
