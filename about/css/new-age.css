@@ -313,9 +313,14 @@ section.about h2 {
   margin-bottom: 25px;
 }
 
+section.about .fact-list {
+  text-align: left;
+  margin: auto;
+  max-width: 650px;
+}
 section.about ul li {
   text-decoration: none;
-  list-style-type: none;
+  list-style-type: disc;
   font-size: 20px;
   padding-bottom: 8px;
 }
