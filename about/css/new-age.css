@@ -245,8 +245,12 @@ section.features h2 {
 
 section.features .device-container,
 section.features .feature-item {
-  max-width: 325px;
   margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 section.features .device-container {
@@ -261,14 +265,6 @@ section.features .device-container {
 
 section.download .card {
   border: 0;
-}
-
-section.features .feature-item {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
 }
 
 section.features .feature-item-overlay {
