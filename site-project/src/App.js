@@ -1,6 +1,7 @@
 import React from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
+import styled from 'react-emotion';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from './theme.js';
 import Header from './Header.js';
 import About from './sections/about/About.js';
 import Intro from './sections/intro/Intro.js';
@@ -8,15 +9,14 @@ import Skills from './sections/skills/Skills.js';
 import Tech from './sections/tech/Tech.js';
 import Testimonials from './sections/testimonials/Testimonials.js';
 
-const theme = createMuiTheme({
-  palette: {
-    type: 'dark',
-  },
-});
+const AppBarSpacer = styled('div')`
+  min-height: ${theme.mixins.toolbar.minHeight}px;
+`;
 
 export default () => (
   <MuiThemeProvider theme={theme}>
     <Header />
+    <AppBarSpacer />
     <Intro />
     <Testimonials />
     <About />

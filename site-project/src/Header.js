@@ -80,13 +80,15 @@ class Header extends React.Component {
                 >
                     <div className={classes.toolbar} />
                     <List>
-                        <ListItem button href="#tech">
+                        <ListItem button onClick={() => { window.location = '#testimonials' }}>
                             <ListItemText primary="Testimonials" />
                         </ListItem>
                         <ListItem button onClick={() => { window.location = '#about' }}>
                             <ListItemText primary="About" />
                         </ListItem>
-
+                        <ListItem button onClick={() => { window.location = '#skills' }}>
+                            <ListItemText primary="Areas of Expertise" />
+                        </ListItem>
                         <ListItem button onClick={() => { window.location = '#tech' }}>
                             <ListItemText primary="Technologies" />
                         </ListItem>

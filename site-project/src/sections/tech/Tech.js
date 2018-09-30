@@ -1,9 +1,8 @@
 import React from 'react';
 
 export default () => (
-
-    <section id="Tech">
+    <div>
         <a name="tech" />
         <h1>Tech</h1>
-    </section>
+    </div>
 );
