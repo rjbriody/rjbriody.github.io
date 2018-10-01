@@ -22,8 +22,7 @@ export default () => (
         <GridContainer
             container
             justify="space-evenly"
-            alignItems="center"
-            style={{ height: '100%' }}>
+            alignItems="center">
             <Grid item>
                 <Typography variant="display3">
                     Build the <ColoredText color="#00fff7">right thing</ColoredText>,<br />
