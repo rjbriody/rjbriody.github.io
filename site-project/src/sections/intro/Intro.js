@@ -15,6 +15,9 @@ const
     `,
     ColoredText = styled('strong')`
         color: ${props => props.color};
+    `,
+    Blurb = styled(Typography)`
+        color: white;
     `;
 
 export default () => (
@@ -24,11 +27,11 @@ export default () => (
             justify="space-evenly"
             alignItems="center">
             <Grid item>
-                <Typography variant="display3">
-                    Build the <ColoredText color="#00fff7">right thing</ColoredText>,<br />
-                    the <ColoredText color="#ee3bac">right way</ColoredText>,<br />
-                    with <ColoredText color="#ab4cfc">great people</ColoredText>.<br />
-                </Typography>
+                    <Blurb variant="display3">
+                        Build the <ColoredText color="#00fff7">right thing</ColoredText>,<br />
+                        the <ColoredText color="#ee3bac">right way</ColoredText>,<br />
+                        with <ColoredText color="#ab4cfc">great people</ColoredText>.<br />
+                    </Blurb>
             </Grid>
             <Grid item>
                 <img src={headshot} alt="headshot" style={{ maxWidth: '100%' }} />

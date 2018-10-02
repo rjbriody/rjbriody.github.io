@@ -4,6 +4,7 @@ import styled from 'react-emotion';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
 
 const
     SectionContainer = styled('div')`
@@ -12,17 +13,33 @@ const
         height: 300px;
     `,
     CardPaper = styled(Paper)`
+        height: 100%;
         background-color: white;
+        text-align: center;
+        padding: 50px;
+    `,
+    Quote = styled(Typography)`
+        font-family: Helvetica, Arial;
+        color: black;
+        font-style: italic;
+    `,
+    QuoteDivider = styled(Divider)`
+        width: 100px;
+        margin: auto;
+    `,
+    Credit = styled(Typography)`
+        color: darkgrey;
     `;
 
 const Card = ({ text, author }) => (
     <CardPaper elevation={24}>
-        <Typography variant="body2">
+        <Quote variant="headline">
             "{text}"
-        </Typography>
-        <Typography variant="caption">
+        </Quote>
+        <QuoteDivider />
+        <Credit variant="caption">
             -{author}
-        </Typography>
+        </Credit>
     </CardPaper>
 )
 export default () => (
@@ -30,20 +47,19 @@ export default () => (
         <a name="testimonials" />
         <Grid
             container
-            justify="space-around"
-            alignItems="center"
-            spacing="32">
-            <Grid item>
+            justify="center"
+            spacing={16}>
+            <Grid item xs={12} lg={4}>
                 <Card
                     text="Bob is leading the team to build a tool that everyone wants to use."
                     author="Anonymous Peer, DataStax Employee Excellence Award 2017" />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} lg={4}>
                 <Card
                     text="You really are one of the absolute best engineers I have ever worked with."
                     author="Coworker" />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} lg={4}>
                 <Card
                     text="Bob just makes $#!~ happen :)"
                     author="Happy Customer" />

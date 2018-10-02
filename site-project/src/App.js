@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 import theme from './theme.js';
 import Header from './Header.js';
 import About from './sections/about/About.js';
@@ -15,6 +17,7 @@ const AppBarSpacer = styled('div')`
 
 export default () => (
   <MuiThemeProvider theme={theme}>
+    <CssBaseline />
     <Header />
     <AppBarSpacer />
     <Intro />
