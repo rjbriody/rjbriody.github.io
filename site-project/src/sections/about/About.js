@@ -5,7 +5,10 @@ import Typography from '@material-ui/core/Typography';
 
 const
     SectionContainer = styled('div')`
-        padding: 100px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
         text-align: center;
         margin: auto;
     `,
@@ -18,7 +21,9 @@ const
         max-width: 650px;
     `,
     ListItem = styled('li')`
-        padding-bottom: 8px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        font-weight: 400;
     `;
 
 export default () => (

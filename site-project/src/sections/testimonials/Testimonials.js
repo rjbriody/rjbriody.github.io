@@ -23,11 +23,12 @@ const
         font-family: Helvetica, Arial;
         color: black;
         font-style: italic;
-        height: 160px;
+        height: 140px;
     `,
     QuoteDivider = styled(Divider)`
-        width: 100px;
+        width: 150px;
         margin: auto;
+        margin-bottom: 20px;
     `,
     Credit = styled(Typography)`
         color: darkgrey;
@@ -66,7 +67,7 @@ export default () => (
                 </Grid>
                 <Grid item>
                     <Card
-                        text="Bob just makes $#!~ happen :)"
+                        text="Bob just makes $#.! happen :)"
                         author="Happy Customer"
                     />
                 </Grid>

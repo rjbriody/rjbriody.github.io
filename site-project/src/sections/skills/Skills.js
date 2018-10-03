@@ -41,6 +41,7 @@ const
         border-bottom-right-radius: .6rem;
     `,
     SkillList = styled('div')`
+        padding-top: 20px;
         text-align: left;
         margin: auto;
         max-width: 650px;
@@ -72,30 +73,18 @@ export default () => (
                 Areas of expertise
         </Header>
             <SkillContainer title="UI / Frontend">
-                <Typography>
+                <Typography variant="headline">
                     I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
-            </Typography>
+                </Typography>
                 <SkillList>
                     <ListItem>Extensive experience in architecture and component design for non-trivial applications.</ListItem>
                     <ListItem>Strong ability to introduce reusable patterns and application “building blocks”. </ListItem>
                     <ListItem>Passionate about pragmatic test patterns and feature coverage.</ListItem>
-                    <ListItem>Outstanding ability to turn fuzzy requirements into fantastic solutions.</ListItem>
+                    <ListItem>Outstanding ability to turn fuzzy requirements into great solutions.</ListItem>
                 </SkillList>
             </SkillContainer>
 
             <SkillDivider />
-
-            <SkillContainer title="UI / Frontend">
-                <Typography>
-                    I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
-            </Typography>
-                <SkillList>
-                    <ListItem>Extensive experience in architecture and component design for non-trivial applications.</ListItem>
-                    <ListItem>Strong ability to introduce reusable patterns and application “building blocks”. </ListItem>
-                    <ListItem>Passionate about pragmatic test patterns and feature coverage.</ListItem>
-                    <ListItem>Outstanding ability to turn fuzzy requirements into fantastic solutions.</ListItem>
-                </SkillList>
-            </SkillContainer>
 
         </SectionContainer>
     </React.Fragment>
