@@ -13,7 +13,8 @@ const
         padding: 10%;
     `,
     CardPaper = styled(Paper)`
-        height: 100%;
+        height: 280px;
+        width: 350px;
         background-color: white;
         text-align: center;
         padding: 50px;
@@ -22,6 +23,7 @@ const
         font-family: Helvetica, Arial;
         color: black;
         font-style: italic;
+        height: 160px;
     `,
     QuoteDivider = styled(Divider)`
         width: 100px;
@@ -36,8 +38,8 @@ const Card = ({ text, author }) => (
         <Quote variant="headline">
             "{text}"
         </Quote>
-        <QuoteDivider />
         <Credit variant="caption">
+            <QuoteDivider />
             -{author}
         </Credit>
     </CardPaper>
@@ -49,21 +51,24 @@ export default () => (
             <Grid
                 container
                 justify="center"
-                spacing={16}>
-                <Grid item xs={12} lg={4}>
+                spacing={32}>
+                <Grid item>
                     <Card
                         text="Bob is leading the team to build a tool that everyone wants to use."
-                        author="Anonymous Peer, DataStax Employee Excellence Award 2017" />
+                        author="Anonymous Peer, DataStax Employee Excellence Award 2017"
+                    />
                 </Grid>
-                <Grid item xs={12} lg={4}>
+                <Grid item>
                     <Card
                         text="You really are one of the absolute best engineers I have ever worked with."
-                        author="Coworker" />
+                        author="Coworker"
+                    />
                 </Grid>
-                <Grid item xs={12} lg={4}>
+                <Grid item>
                     <Card
                         text="Bob just makes $#!~ happen :)"
-                        author="Happy Customer" />
+                        author="Happy Customer"
+                    />
                 </Grid>
             </Grid>
         </SectionContainer>
