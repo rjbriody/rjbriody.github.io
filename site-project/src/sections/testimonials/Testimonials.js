@@ -20,9 +20,7 @@ const
         padding: 50px;
     `,
     Quote = styled(Typography)`
-        font-family: Helvetica, Arial;
         color: black;
-        font-style: italic;
         height: 140px;
     `,
     QuoteDivider = styled(Divider)`

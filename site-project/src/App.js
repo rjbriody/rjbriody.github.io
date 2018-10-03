@@ -11,9 +11,14 @@ import Skills from './sections/skills/Skills.js';
 import Tech from './sections/tech/Tech.js';
 import Testimonials from './sections/testimonials/Testimonials.js';
 
-const AppBarSpacer = styled('div')`
-  min-height: ${theme.mixins.toolbar.minHeight}px;
-`;
+const
+  AppBarSpacer = styled('div')`
+    min-height: ${theme.mixins.toolbar.minHeight}px;
+  `,
+  Footer = styled('div')`
+    height: 300px;
+    background-color: black;
+  `;
 
 export default () => (
   <MuiThemeProvider theme={theme}>
@@ -25,5 +30,6 @@ export default () => (
     <About />
     <Skills />
     <Tech />
+    <Footer />
   </MuiThemeProvider>
 );

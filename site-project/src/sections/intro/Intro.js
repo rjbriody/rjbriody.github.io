@@ -13,8 +13,9 @@ const
     GridContainer = styled(Grid)`
         height: 100%;
     `,
-    ColoredText = styled('strong')`
+    ColoredText = styled('span')`
         color: ${props => props.color};
+        font-weight: 400;
     `,
     Blurb = styled(Typography)`
         color: white;
