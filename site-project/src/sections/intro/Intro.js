@@ -18,23 +18,26 @@ const
     `,
     Blurb = styled(Typography)`
         color: white;
+        width: 500px;
     `;
 
 export default () => (
     <SectionContainer>
         <GridContainer
             container
-            justify="space-evenly"
-            alignItems="center">
+            justify="center"
+            alignItems="center"
+            spacing={32}
+        >
             <Grid item>
-                    <Blurb variant="display3">
-                        Build the <ColoredText color="#00fff7">right thing</ColoredText>,<br />
-                        the <ColoredText color="#ee3bac">right way</ColoredText>,<br />
-                        with <ColoredText color="#ab4cfc">great people</ColoredText>.<br />
-                    </Blurb>
+                <Blurb variant="display3">
+                    Build the <ColoredText color="#00fff7">right thing</ColoredText>,<br />
+                    the <ColoredText color="#ee3bac">right way</ColoredText>,<br />
+                    with <ColoredText color="#ab4cfc">great people</ColoredText>.<br />
+                </Blurb>
             </Grid>
             <Grid item>
-                <img src={headshot} alt="headshot" style={{ maxWidth: '100%' }} />
+                <img src={headshot} alt="headshot" style={{ maxHeight: '450px' }} />
             </Grid>
         </GridContainer>
     </SectionContainer>

@@ -10,7 +10,7 @@ const
     SectionContainer = styled('div')`
         background: -webkit-gradient(linear, left top, left bottom, from(#fd5252), to(#b539fd));
         background: linear-gradient(#fd5252,#b539fd);
-        height: 300px;
+        padding: 10%;
     `,
     CardPaper = styled(Paper)`
         height: 100%;
@@ -43,28 +43,30 @@ const Card = ({ text, author }) => (
     </CardPaper>
 )
 export default () => (
-    <SectionContainer>
+    <React.Fragment>
         <a name="testimonials" />
-        <Grid
-            container
-            justify="center"
-            spacing={16}>
-            <Grid item xs={12} lg={4}>
-                <Card
-                    text="Bob is leading the team to build a tool that everyone wants to use."
-                    author="Anonymous Peer, DataStax Employee Excellence Award 2017" />
+        <SectionContainer>
+            <Grid
+                container
+                justify="center"
+                spacing={16}>
+                <Grid item xs={12} lg={4}>
+                    <Card
+                        text="Bob is leading the team to build a tool that everyone wants to use."
+                        author="Anonymous Peer, DataStax Employee Excellence Award 2017" />
+                </Grid>
+                <Grid item xs={12} lg={4}>
+                    <Card
+                        text="You really are one of the absolute best engineers I have ever worked with."
+                        author="Coworker" />
+                </Grid>
+                <Grid item xs={12} lg={4}>
+                    <Card
+                        text="Bob just makes $#!~ happen :)"
+                        author="Happy Customer" />
+                </Grid>
             </Grid>
-            <Grid item xs={12} lg={4}>
-                <Card
-                    text="You really are one of the absolute best engineers I have ever worked with."
-                    author="Coworker" />
-            </Grid>
-            <Grid item xs={12} lg={4}>
-                <Card
-                    text="Bob just makes $#!~ happen :)"
-                    author="Happy Customer" />
-            </Grid>
-        </Grid>
-    </SectionContainer>
+        </SectionContainer>
+    </React.Fragment>
 );
 
