@@ -29,6 +29,11 @@ const
         border-top-left-radius: .6rem;
         border-top-right-radius: .6rem;
     `,
+    SkillAnchorContainer = styled('div')`
+        position: relative;
+        top: -50px;
+        visibility: hidden;
+    `,
     SkillHeader = styled(Typography)`
         background: -webkit-gradient(linear, right top, left top, from(#f120e7), to(#ff1979));
         background: linear-gradient(to left, #f120e7 30%, #ff1979);
@@ -56,8 +61,11 @@ const
         padding-bottom: 8px;
     `;
 
-const SkillContainer = ({ title, children }) => (
+const SkillContainer = ({ anchor, title, children }) => (
     <SkillWrapper>
+        <SkillAnchorContainer>
+            <a name={anchor}>{anchor}</a>
+        </SkillAnchorContainer>
         <SkillContainerHeader>
             <div>
                 <SkillHeader variant="display2">
@@ -79,9 +87,8 @@ export default () => (
                 Areas of expertise
         </Header>
 
-            <a name="web" />
             <SkillDivider />
-            <SkillContainer title="Web Services & APIs">
+            <SkillContainer anchor="web" title="Web Services & APIs">
                 <SkillBlurb variant="headline">
                     I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
                 </SkillBlurb>
@@ -101,9 +108,8 @@ export default () => (
                 </SkillList>
             </SkillContainer>
 
-            <a name="ui" />
             <SkillDivider />
-            <SkillContainer title="UI / Frontend">
+            <SkillContainer anchor="ui" title="UI / Frontend">
                 <SkillBlurb variant="headline">
                     I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
                 </SkillBlurb>
@@ -123,9 +129,8 @@ export default () => (
                 </SkillList>
             </SkillContainer>
 
-            <a name="datavis" />
             <SkillDivider />
-            <SkillContainer title="Data Visualization">
+            <SkillContainer anchor="datavis" title="Data Visualization">
                 <SkillBlurb variant="headline">
                     Mmmm, Data Visualization; the culmination of software, art, psychology, and design. <br />
                     <br />
