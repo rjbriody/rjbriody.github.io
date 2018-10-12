@@ -2,7 +2,6 @@
   "name": "site-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bobbriody.com/about",
   "dependencies": {
     "@material-ui/core": "3.1.2",
     "@material-ui/icons": "3.0.1",

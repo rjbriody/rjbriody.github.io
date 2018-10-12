@@ -87,7 +87,7 @@ export default () => (
                 Areas of expertise
             </Header>
 
-            <SkillDivider />
+            {/* <SkillDivider />
             <SkillContainer title="Web Services & APIs">
                 <SkillBlurb variant="headline">
                     I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
@@ -106,7 +106,7 @@ export default () => (
                         Outstanding ability to turn fuzzy requirements into great solutions.
                         </ListItem>
                 </SkillList>
-            </SkillContainer>
+            </SkillContainer> */}
 
             <SkillDivider />
             <SkillContainer title="UI / Frontend">
