@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { Typography } from '@material-ui/core';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
 const
     SectionContainer = styled('div')`
@@ -14,25 +16,14 @@ const
         color: white;
         padding-bottom: 50px;
     `,
-    SkillDivider = styled(`div`)`
-        padding: 20px;
+    SkillDivider = styled('div')`
+        padding: 10px;
     `,
-    SkillWrapper = styled('div')`
+    SkillWrapper = styled(ExpansionPanel)`
         box-shadow: 0px 0px 40px #252525;
         max-width: 1000px;
         margin: auto;
-    `,
-    SkillContainerHeader = styled('div')`
-        background-color: black;
-        display: flex;
-        padding: 1rem;
-        border-top-left-radius: .6rem;
-        border-top-right-radius: .6rem;
-    `,
-    SkillAnchorContainer = styled('div')`
-        position: relative;
-        top: -50px;
-        visibility: hidden;
+        background: none;
     `,
     SkillHeader = styled(Typography)`
         background: -webkit-gradient(linear, right top, left top, from(#f120e7), to(#ff1979));
@@ -42,9 +33,9 @@ const
     `,
     SkillContent = styled('div')`
         background-color: white;
-        padding: 50px;
         border-bottom-left-radius: .6rem;
         border-bottom-right-radius: .6rem;
+        padding: 50px;
     `,
     SkillBlurb = styled(Typography)`
         color: black;
@@ -61,18 +52,13 @@ const
         padding-bottom: 8px;
     `;
 
-const SkillContainer = ({ anchor, title, children }) => (
+const SkillContainer = ({ title, children }) => (
     <SkillWrapper>
-        <SkillAnchorContainer>
-            <a name={anchor}>{anchor}</a>
-        </SkillAnchorContainer>
-        <SkillContainerHeader>
-            <div>
-                <SkillHeader variant="display2">
-                    {title}
-                </SkillHeader>
-            </div>
-        </SkillContainerHeader>
+        <ExpansionPanelSummary style={{ background: 'black', top: '-1px' }}>
+            <SkillHeader variant="display2">
+                + {title}
+            </SkillHeader>
+        </ExpansionPanelSummary>
         <SkillContent>
             {children}
         </SkillContent>
@@ -85,10 +71,10 @@ export default () => (
         <SectionContainer>
             <Header variant="display3">
                 Areas of expertise
-        </Header>
+            </Header>
 
             <SkillDivider />
-            <SkillContainer anchor="web" title="Web Services & APIs">
+            <SkillContainer title="Web Services & APIs">
                 <SkillBlurb variant="headline">
                     I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
                 </SkillBlurb>
@@ -109,7 +95,7 @@ export default () => (
             </SkillContainer>
 
             <SkillDivider />
-            <SkillContainer anchor="ui" title="UI / Frontend">
+            <SkillContainer title="UI / Frontend">
                 <SkillBlurb variant="headline">
                     I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
                 </SkillBlurb>
@@ -130,7 +116,7 @@ export default () => (
             </SkillContainer>
 
             <SkillDivider />
-            <SkillContainer anchor="datavis" title="Data Visualization">
+            <SkillContainer title="Data Visualization">
                 <SkillBlurb variant="headline">
                     Mmmm, Data Visualization; the culmination of software, art, psychology, and design. <br />
                     <br />

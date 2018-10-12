@@ -42,7 +42,8 @@ const Card = ({ text, author }) => (
             -{author}
         </Credit>
     </CardPaper>
-)
+);
+
 export default () => (
     <React.Fragment>
         <a name="testimonials" />
