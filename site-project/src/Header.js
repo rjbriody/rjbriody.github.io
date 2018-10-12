@@ -5,7 +5,6 @@ import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -22,9 +21,6 @@ const
     `,
     AppBarSpacer = styled('div')`
         min-height: ${theme.mixins.toolbar.minHeight}px;
-    `,
-    NestedList = styled(List)`
-        padding-left: ${theme.spacing.unit * 2}px;
     `;
 
 export default class Header extends React.Component {
@@ -73,21 +69,9 @@ export default class Header extends React.Component {
                         <ListItem button onClick={() => { this.onClick('#about') }}>
                             <ListItemText primary="About" />
                         </ListItem>
-                        <Divider />
                         <ListItem button onClick={() => { this.onClick('#skills') }}>
                             <ListItemText primary="Areas of Expertise" />
                         </ListItem>
-                        <NestedList>
-                            <ListItem button onClick={() => { this.onClick('#web') }}>
-                                <ListItemText primary="Web Services & APIs" />
-                            </ListItem>
-                            <ListItem button onClick={() => { this.onClick('#ui') }}>
-                                <ListItemText primary="UI / Frontend" />
-                            </ListItem>
-                            <ListItem button onClick={() => { this.onClick('#datavis') }}>
-                                <ListItemText primary="Data Visualization" />
-                            </ListItem>
-                        </NestedList>
                     </List>
                 </Drawer>
             </React.Fragment>

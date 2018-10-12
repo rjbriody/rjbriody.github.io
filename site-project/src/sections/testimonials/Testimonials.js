@@ -30,6 +30,10 @@ const
     `,
     Credit = styled(Typography)`
         color: darkgrey;
+    `,
+    AnchorContainer = styled('div')`
+        visibility: hidden;
+        height: 0px;
     `;
 
 const Card = ({ text, author }) => (
@@ -46,7 +50,9 @@ const Card = ({ text, author }) => (
 
 export default () => (
     <React.Fragment>
-        <a name="testimonials" />
+        <AnchorContainer>
+            <a name="testimonials">Testimonials</a>
+        </AnchorContainer>
         <SectionContainer>
             <Grid
                 container
@@ -72,6 +78,6 @@ export default () => (
                 </Grid>
             </Grid>
         </SectionContainer>
-    </React.Fragment>
+    </React.Fragment >
 );
 

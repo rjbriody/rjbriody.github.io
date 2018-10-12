@@ -28,11 +28,17 @@ const
     `,
     ListText = styled(Typography)`
         color: black;
+    `,
+    AnchorContainer = styled('div')`
+        visibility: hidden;
+        height: 0px;
     `;
 
 export default () => (
     <React.Fragment>
-        <a name="about" />
+        <AnchorContainer>
+            <a name="about">About</a>
+        </AnchorContainer>
         <SectionContainer>
             <Header variant="display3">
                 Things to know about me...

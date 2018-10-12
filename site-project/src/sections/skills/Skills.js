@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import { Typography } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const
     SectionContainer = styled('div')`
@@ -21,15 +22,22 @@ const
     `,
     SkillWrapper = styled(ExpansionPanel)`
         box-shadow: 0px 0px 40px #252525;
+        width: 90%;
         max-width: 1000px;
         margin: auto;
         background: none;
     `,
     SkillHeader = styled(Typography)`
-        background: -webkit-gradient(linear, right top, left top, from(#f120e7), to(#ff1979));
-        background: linear-gradient(to left, #f120e7 30%, #ff1979);
+        min-width: 50%;
+        text-align: left;
+        background: -webkit-gradient(linear, right top, left top, from(#9100ff), to(#ff0052));
+        background: linear-gradient(to left, #9100ff, #ff0052);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    `,
+    ExpandIcon = styled(ExpandMoreIcon)`
+        color: #9100ff;
+        font-size: 1.5em;
     `,
     SkillContent = styled('div')`
         background-color: white;
@@ -50,13 +58,17 @@ const
     `,
     ListItem = styled('li')`
         padding-bottom: 8px;
+    `,
+    AnchorContainer = styled('div')`
+        visibility: hidden;
+        height: 0px;
     `;
 
 const SkillContainer = ({ title, children }) => (
     <SkillWrapper>
-        <ExpansionPanelSummary style={{ background: 'black', top: '-1px' }}>
+        <ExpansionPanelSummary expandIcon={<ExpandIcon />} style={{ background: 'black', top: '-1px' }}>
             <SkillHeader variant="display2">
-                + {title}
+                {title}
             </SkillHeader>
         </ExpansionPanelSummary>
         <SkillContent>
@@ -67,7 +79,9 @@ const SkillContainer = ({ title, children }) => (
 
 export default () => (
     <React.Fragment>
-        <a name="skills" />
+        <AnchorContainer>
+            <a name="skills">Skills</a>
+        </AnchorContainer>
         <SectionContainer>
             <Header variant="display3">
                 Areas of expertise
