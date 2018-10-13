@@ -9,6 +9,8 @@ const
     SectionContainer = styled('div')`
         padding-top: 100px;
         padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
         text-align: center;
         margin: auto;
         background-color: #1a1c22;
@@ -22,7 +24,6 @@ const
     `,
     SkillWrapper = styled(ExpansionPanel)`
         box-shadow: 0px 0px 40px #252525;
-        width: 90%;
         max-width: 1000px;
         margin: auto;
         background: none;
