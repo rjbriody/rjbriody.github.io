@@ -4,6 +4,7 @@ import { Typography } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 
 const
     SectionContainer = styled('div')`
@@ -42,9 +43,7 @@ const
     `,
     SkillContent = styled('div')`
         background-color: white;
-        border-bottom-left-radius: .6rem;
-        border-bottom-right-radius: .6rem;
-        padding: 50px;
+        padding: 20px;
     `,
     SkillBlurb = styled(Typography)`
         color: black;
@@ -60,15 +59,18 @@ const
     ListItem = styled('li')`
         padding-bottom: 8px;
     `,
+    ListText = styled(Typography)`
+        color: black;
+    `,
     AnchorContainer = styled('div')`
         visibility: hidden;
         height: 0px;
     `;
 
-const SkillContainer = ({ title, children }) => (
+const SkillContainerBase = ({ title, children, width }) => (
     <SkillWrapper>
         <ExpansionPanelSummary expandIcon={<ExpandIcon />} style={{ background: 'black', top: '-1px' }}>
-            <SkillHeader variant="display2">
+            <SkillHeader variant={isWidthUp('sm', width) ? "display3" : "display1"}>
                 {title}
             </SkillHeader>
         </ExpansionPanelSummary>
@@ -77,14 +79,20 @@ const SkillContainer = ({ title, children }) => (
         </SkillContent>
     </SkillWrapper>
 );
+const SkillContainer = withWidth()(SkillContainerBase);
 
-export default () => (
+
+const getBlurbTypographyVariant = width => {
+    return isWidthUp('sm', width) ? 'headline' : 'subheading';
+}
+
+const Skills = ({ width }) => (
     <React.Fragment>
         <AnchorContainer>
             <a name="skills">Skills</a>
         </AnchorContainer>
         <SectionContainer>
-            <Header variant="display3">
+            <Header variant={isWidthUp('sm', width) ? "display3" : "display1"}>
                 Areas of expertise
             </Header>
 
@@ -111,28 +119,36 @@ export default () => (
 
             <SkillDivider />
             <SkillContainer title="UI / Frontend">
-                <SkillBlurb variant="headline">
+                <SkillBlurb variant={getBlurbTypographyVariant(width)}>
                     I specialize in leading efforts to build non-trival applications that people love to use. I achieve this by combining my knowlege of software design principles with relentless attention to product focus and usability.
                 </SkillBlurb>
                 <SkillList>
                     <ListItem>
-                        Extensive experience in architecture and component design for non-trivial applications.
-                        </ListItem>
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Extensive experience in architecture and component design for non-trivial applications.
+                        </ListText>
+                    </ListItem>
                     <ListItem>
-                        Strong ability to introduce reusable patterns and application “building blocks”.
-                        </ListItem>
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Strong ability to introduce reusable patterns and application “building blocks”.
+                        </ListText>
+                    </ListItem>
                     <ListItem>
-                        Passionate about pragmatic test patterns and feature coverage.
-                        </ListItem>
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Passionate about pragmatic test patterns and feature coverage.
+                        </ListText>
+                    </ListItem>
                     <ListItem>
-                        Outstanding ability to turn fuzzy requirements into great solutions.
-                        </ListItem>
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Outstanding ability to turn fuzzy requirements into great solutions.
+                        </ListText>
+                    </ListItem>
                 </SkillList>
             </SkillContainer>
 
             <SkillDivider />
             <SkillContainer title="Data Visualization">
-                <SkillBlurb variant="headline">
+                <SkillBlurb variant={getBlurbTypographyVariant(width)}>
                     Mmmm, Data Visualization; the culmination of software, art, psychology, and design. <br />
                     <br />
                     Personally, I enjoy data visualization because it leverages my diverse skill set more than any other software discipline.
@@ -142,16 +158,24 @@ export default () => (
                 </SkillBlurb>
                 <SkillList>
                     <ListItem>
-                        Designed and implemented the DataStax Studio Interactive Graph View, Interactive Schema View, and Gremlin Traversal Profile View.
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Designed and implemented the DataStax Studio Interactive Graph View, Interactive Schema View, and Gremlin Traversal Profile View.
+                        </ListText>
                     </ListItem>
                     <ListItem>
-                        Strong ability to introduce reusable patterns and application “building blocks”.
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Strong ability to introduce reusable patterns and application “building blocks”.
+                        </ListText>
                     </ListItem>
                     <ListItem>
-                        Passionate about pragmatic test patterns and feature coverage.
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Passionate about pragmatic test patterns and feature coverage.
+                        </ListText>
                     </ListItem>
                     <ListItem>
-                        Outstanding ability to turn fuzzy requirements into great solutions.
+                        <ListText variant={getBlurbTypographyVariant(width)}>
+                            Outstanding ability to turn fuzzy requirements into great solutions.
+                        </ListText>
                     </ListItem>
                 </SkillList>
             </SkillContainer>
@@ -159,3 +183,5 @@ export default () => (
         </SectionContainer>
     </React.Fragment>
 );
+
+export default withWidth()(Skills);

@@ -2,13 +2,14 @@ import React from 'react';
 
 import styled from 'react-emotion';
 import Typography from '@material-ui/core/Typography';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 
 const
     SectionContainer = styled('div')`
         padding-top: 100px;
         padding-bottom: 100px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
         text-align: center;
         margin: auto;
         background-color: white;
@@ -34,39 +35,43 @@ const
         height: 0px;
     `;
 
-export default () => (
+const getListTextTypographyVariant = width => {
+    return isWidthUp('sm', width) ? 'headline' : 'subheading';
+}
+
+const About = ({ width }) => (
     <React.Fragment>
         <AnchorContainer>
             <a name="about">About</a>
         </AnchorContainer>
         <SectionContainer>
-            <Header variant="display3">
+            <Header variant={isWidthUp('sm', width) ? "display3" : "display1"}>
                 Things to know about me...
             </Header>
             <FactList>
                 <ul>
                     <ListItem>
-                        <ListText variant="headline">
+                        <ListText variant={getListTextTypographyVariant(width)}>
                             My approach to software is rooted in user empathy and product focus.
                         </ListText>
                     </ListItem>
                     <ListItem>
-                        <ListText variant="headline">
+                        <ListText variant={getListTextTypographyVariant(width)}>
                             I get stuff done and I have a good time while I'm at it.
                         </ListText>
                     </ListItem>
                     <ListItem>
-                        <ListText variant="headline">
+                        <ListText variant={getListTextTypographyVariant(width)}>
                             People say that I bring energy, innovation, and focus to every team that I’m a part of.
                         </ListText>
                     </ListItem>
                     <ListItem>
-                        <ListText variant="headline">
+                        <ListText variant={getListTextTypographyVariant(width)}>
                             The only thing I like better than learning new technology is using boring old tools that just work :)
                         </ListText>
                     </ListItem>
                     <ListItem>
-                        <ListText variant="headline">
+                        <ListText variant={getListTextTypographyVariant(width)}>
                             I'm at my best when working with a solid team on a challenging project in a fast-paced environment.
                         </ListText>
                     </ListItem>
@@ -75,3 +80,5 @@ export default () => (
         </SectionContainer >
     </React.Fragment>
 );
+
+export default withWidth()(About);

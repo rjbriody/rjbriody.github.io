@@ -13,22 +13,24 @@ const
         min-height: 600px;
         padding-top: 50px;
         padding-bottom: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     `,
     CardPaper = styled(Paper)`
-        height: 280px;
-        width: 350px;
+        min-height: 280px;
+        width: 98%;
+        max-width: 350px;
         background-color: white;
         text-align: center;
         padding: 50px;
+        margin: auto;
     `,
     Quote = styled(Typography)`
         color: black;
-        height: 150px;
+        min-height: 150px;
     `,
     QuoteDivider = styled(Divider)`
         width: 180px;

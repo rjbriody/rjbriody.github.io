@@ -5,15 +5,13 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 
-
 const
     SectionContainer = styled('div')`
         background: linear-gradient(170deg, #2d2f39 0%, #1a1c22 60%);
         height: 100vh;
         padding: 20px;
-    `,
-    GridContainer = styled(Grid)`
-        height: 100%;
+        align-items: center;
+        display: flex;
     `,
     ColoredText = styled('span')`
         color: ${props => props.color};
@@ -29,7 +27,7 @@ const
 
 const Intro = ({width}) => (
     <SectionContainer>
-        <GridContainer
+        <Grid
             container
             justify="center"
             alignItems="center"
@@ -47,7 +45,7 @@ const Intro = ({width}) => (
                     <img src={headshot} alt="headshot" style={{ maxHeight: '600px', maxWidth: '90%'}} />
                 </ImageContainer>
             </Grid>
-        </GridContainer>
+        </Grid>
     </SectionContainer>
 );
 

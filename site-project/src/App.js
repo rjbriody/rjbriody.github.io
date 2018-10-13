@@ -26,7 +26,7 @@ const
     min-height: ${theme.mixins.toolbar.minHeight}px;
   `,
   Footer = styled('div')`
-    height: 300px;
+    height: 50px;
     background-color: black;
   `;
 
