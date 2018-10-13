@@ -11,8 +11,8 @@ const
         background: -webkit-gradient(linear, left top, left bottom, from(#fd5252), to(#b539fd));
         background: linear-gradient(#fd5252,#b539fd);
         min-height: 600px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
         padding-left: 25px;
         padding-right: 25px;
         display: flex;
