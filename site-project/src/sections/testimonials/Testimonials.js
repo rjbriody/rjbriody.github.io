@@ -20,17 +20,18 @@ const
         justify-content: center;
     `,
     CardPaper = styled(Paper)`
-        min-height: 280px;
+        min-height: 265px;
         width: 98%;
         max-width: 350px;
         background-color: white;
         text-align: center;
-        padding: 50px;
+        padding: 30px;
+        padding-top: 50px;
         margin: auto;
     `,
     Quote = styled(Typography)`
         color: black;
-        min-height: 150px;
+        min-height: 130px;
     `,
     QuoteDivider = styled(Divider)`
         width: 180px;
