@@ -14,7 +14,7 @@ const
         flex-direction: column;
   `,
     FooterText = styled(Typography)`
-        color: darkgrey;
+        color: lightgray;
     `;
 
 export default () => (

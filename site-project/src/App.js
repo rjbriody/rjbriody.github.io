@@ -12,7 +12,7 @@ import Footer from './Footer.js';
 import About from './sections/about/About.js';
 import Intro from './sections/intro/Intro.js';
 import Skills from './sections/skills/Skills.js';
-// import Experience from './sections/experience/Experience.js';
+import Experience from './sections/experience/Experience.js';
 import Contact from './sections/contact/Contact.js';
 import Testimonials from './sections/testimonials/Testimonials.js';
 
@@ -38,9 +38,9 @@ const App = () => (
       <Testimonials />
       <About />
       <Skills />
-      {/* <Experience /> */}
+      <Experience />
       <Contact />
-      <Footer/>
+      <Footer />
     </MuiThemeProvider>
   </JssProvider>
 );

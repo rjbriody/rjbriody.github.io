@@ -62,6 +62,11 @@ const About = ({ width }) => (
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
+                            I'm happy to pitch in wherever I can and I often wear a few different hats, but most of all <strong>I write code</strong>.
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant={getListTextTypographyVariant(width)}>
                             People say that I bring energy, innovation, and focus to every team that I’m a part of.
                         </ListText>
                     </ListItem>
