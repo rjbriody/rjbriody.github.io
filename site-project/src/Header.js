@@ -72,6 +72,9 @@ export default class Header extends React.Component {
                         <ListItem button onClick={() => { this.onClick('#skills') }}>
                             <ListItemText primary="Areas of Expertise" />
                         </ListItem>
+                        <ListItem button onClick={() => { this.onClick('#contact') }}>
+                            <ListItemText primary="Contact" />
+                        </ListItem>
                     </List>
                 </Drawer>
             </React.Fragment>

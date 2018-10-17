@@ -70,7 +70,7 @@ const
 const SkillContainerBase = ({ title, children, width }) => (
     <SkillWrapper>
         <ExpansionPanelSummary expandIcon={<ExpandIcon />} style={{ background: 'black', top: '-1px' }}>
-            <SkillHeader variant={isWidthUp('sm', width) ? "display3" : "display1"}>
+            <SkillHeader variant={isWidthUp('sm', width) ? "display2" : "display1"}>
                 {title}
             </SkillHeader>
         </ExpansionPanelSummary>
@@ -248,8 +248,12 @@ const Skills = ({ width }) => (
                         </ListText>
                     </ListItem>
 
-                    <h2>Network Analysis Adventure with DSE Graph, DataStax Studio, and TinkerPop.</h2>
-                    <iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/7qb3C-lnLX8?rel=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/7qb3C-lnLX8?rel=0"
+                        title="Network Analysis with Tinkerpop, DataStax Graph, and DataStax Studio."
+                        frameBorder="0"
+                        allowFullScreen
+                    />
 
                 </SkillList>
             </SkillContainer>

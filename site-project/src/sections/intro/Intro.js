@@ -9,7 +9,7 @@ const
     SectionContainer = styled('div')`
         background: linear-gradient(170deg, #2d2f39 0%, #1a1c22 60%);
         height: 100vh;
-        padding: 20px;
+        padding: 50px;
         align-items: center;
         display: flex;
     `,
@@ -25,7 +25,7 @@ const
         text-align: center;
     `;
 
-const Intro = ({width}) => (
+const Intro = ({ width }) => (
     <SectionContainer>
         <Grid
             container
@@ -42,7 +42,14 @@ const Intro = ({width}) => (
             </Grid>
             <Grid item>
                 <ImageContainer>
-                    <img src={headshot} alt="headshot" style={{ maxHeight: '600px', maxWidth: '90%'}} />
+                    <img
+                        src={headshot}
+                        alt="headshot"
+                        style={{
+                            maxHeight: '600px',
+                            width: '90%',
+                            maxWidth: '400px'
+                        }} />
                 </ImageContainer>
             </Grid>
         </Grid>
