@@ -180,7 +180,8 @@ const Skills = ({ width }) => (
             <SkillContainer title="Data Visualization">
                 <SkillBlurb variant="subheading">
                     Mmmm, Data Visualization; the culmination of software, art, psychology, and design.<br />
-                    Personally, I enjoy data visualization because I'm able to leverage my creative, artistic side as well as the regular engineering skills.
+                    <br/>
+                    Personally, I enjoy data visualization because I'm able to leverage my artistic side as well as the regular engineering skills.
                     I love that Datavis requires me to become deeply familiar with the nuances of the domain and the goals and mindset of the user.
                     Most of all, I like the satisfaction I get from enabling a complex goal with a beautiful solution that’s obvious and intuitive.
                 </SkillBlurb>
@@ -206,7 +207,7 @@ const Skills = ({ width }) => (
             <SkillDivider />
             <SkillContainer title="Graph & Network">
                 <SkillBlurb variant="subheading">
-                    In 2014 I became the 7th engineer at Aurelius, the company behind Apache TinkerPop and Titan Graph Database (now Apache Jaunus).
+                    In 2014 I became the 7th engineer at Aurelius, the company behind the <a href="http://tinkerpop.apache.org/" target="_blank">Apache TinkerPop</a> Graph Library and <a href="https://thinkaurelius.wordpress.com/team/" target="_blank">Open Source Graph Database, Titan</a>. 
                     This put me smack dab in the center of the graph technology universe, and it was amazing.
                     I was working with the sharpest graph minds in the world and I was solving the toughest graph problems around.
                     <br /><br />

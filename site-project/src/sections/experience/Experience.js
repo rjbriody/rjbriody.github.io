@@ -49,12 +49,9 @@ const
         color: black;
         text-align: left;
     `,
-    SkillTime = styled(Typography)`
-        float: right;
-        color: black;
-    `,
     SkillStrong = styled(Typography)`
         color: black;
+        font-weight: 400;
         text-align: left;
     `,
     SkillList = styled('ul')`
@@ -70,6 +67,12 @@ const
     ListText = styled(Typography)`
         color: black;
     `,
+    TechList = styled(Typography)`
+        color: black;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px
+    `,
     AnchorContainer = styled('div')`
         visibility: hidden;
         height: 0px;
@@ -78,7 +81,7 @@ const
         margin: auto;
     `;
 
-const SkillContainerBase = ({ children, time, title, width }) => (
+const SkillContainerBase = ({ children, title, width }) => (
     <SkillWrapper>
         <ExpansionPanelSummary expandIcon={<ExpandIcon />} style={{ background: 'black', top: '-1px' }}>
             <SkillHeader variant={isWidthUp('sm', width) ? "display2" : "display1"}>
@@ -86,9 +89,6 @@ const SkillContainerBase = ({ children, time, title, width }) => (
             </SkillHeader>
         </ExpansionPanelSummary>
         <SkillContent>
-            <SkillTime>
-                {time}
-            </SkillTime>
             {children}
         </SkillContent>
     </SkillWrapper>
@@ -106,19 +106,17 @@ const Experience = ({ width }) => (
             </Header>
 
             <SkillDivider />
-            <SkillContainer
-                title="DataStax"
-                time="2015 - Present"
-            >
+            <SkillContainer title="DataStax">
                 <SkillBlurb variant="subheading">
                     <SkillStrong variant="heading">
+                        2015 - Present<br />
                         Technical Lead & Development Manager<br />
-                        Projects: DataStax Studio
+                        Primary Project: DataStax Studio
                     </SkillStrong>
                     <br />
                     <a href="https://www.datastax.com/products/datastax-studio-and-development-tools#DataStax-Studio" target="_blank">Studio is a Notebook-style developer enablement tool</a> that DataStax Enterprise (DSE) customers use to develop applications against DSE Graph, CQL, Search, & Analytics.
                 </SkillBlurb>
-                <SkillStrong>
+                <SkillStrong variant="subheading">
                     <br />
                     Creator & Technical Lead (2015-Present)
                 </SkillStrong>
@@ -148,12 +146,12 @@ const Experience = ({ width }) => (
 
                         <ListItem>
                             <ListText variant="subheading">
-                                Best-in-class graph visualization and charting interface with interactive customizations and exploration capabilities.
+                                <a href="https://www.datastax.com/wp-content/uploads/2017/06/Screen-Shot-2017-05-24-at-3.31.43-PM.png" target="_blank">Best-in-class graph visualization and charting interface</a> with interactive customizations and exploration capabilities.
                             </ListText>
                         </ListItem>
                         <ListItem>
                             <ListText variant="subheading">
-                                “Whiteboard inspired” property-graph schema viewer that enables a natural, interactive schema exploration experience.
+                                “Whiteboard inspired” <a href="https://s3.amazonaws.com/datastax-graph-schema-viewer/index.html#/?schema=pokegraph.json" target="_blank">property-graph schema viewer</a> that enables a natural, interactive schema exploration experience.
                             </ListText>
                         </ListItem>
                         <ListItem>
@@ -163,7 +161,7 @@ const Experience = ({ width }) => (
                         </ListItem>
                         <ListItem>
                             <ListText variant="subheading">
-                                Domain-agnostic, dynamic charting capabilities for on-the-fly data visualization.
+                                Domain-agnostic, <a href="https://www.datastax.com/wp-content/uploads/2017/06/Screen-Shot-2017-05-24-at-3.31.43-PM.png" target="_blank">dynamic charting capabilities</a> for on-the-fly data visualization.
                         </ListText>
                         </ListItem>
 
@@ -175,7 +173,7 @@ const Experience = ({ width }) => (
                     </SkillList>
                 </SkillList>
 
-                <SkillStrong>
+                <SkillStrong variant="subheading">
                     Dev Manager (Jan 2018 - Present)
                 </SkillStrong>
                 <SkillList>
@@ -193,7 +191,7 @@ const Experience = ({ width }) => (
 
                 </SkillList>
 
-                <SkillStrong>
+                <SkillStrong variant="subheading">
                     Acting Product Manager (Temporary 2017)
                 </SkillStrong>
                 <SkillList>
@@ -204,15 +202,63 @@ const Experience = ({ width }) => (
                     </ListItem>
                 </SkillList>
 
+                <TechList>
+                    Technologies: DataStax Enterprise (Cassandra, Graph, Solr, Spark), Java, JavaScript, TinkerPop, React, Redux, vis.js, D3, Spring Framework, JAX-RS, JSON, Junit, Git.
+                </TechList>
+                <br />
+                <SkillStrong variant="subheading">
+                    Misceleneous
+                </SkillStrong>
+                <SkillList>
+                    <ListItem>
+                        <ListText variant="subheading">
+                            Extremely honored to be selected by peers for an annual “Employee Excellence Award”. (Awarded to 6 of ~150 team members.) <a href="https://photos.app.goo.gl/iXFCr6GWF78Dhm9x2" target="_blank">See what folks had to say here.</a>
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant="subheading">
+                            Pioneered the forefront project, a customizable demonstration platform that provides the sales team with unprecedented ability to create pristine, customer-focused, interactive sales collateral that highlights key DataStax differentiators to high-value prospects.
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant="subheading">
+                            Volunteered to implement the <a href="https://s3.amazonaws.com/datastax-graph-schema-viewer/index.html#/?schema=pokegraph.json" target="_blank">Standalone schema viewer</a>, an html/js app that is used to dynamically render an interactive property-graph schema view that can be embedded in blog posts, documentation, and github examples. (1.5 week side project to help developer relations team.)
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant="subheading">
+                            2016 Cassandra Summit Speaker <a href="https://youtu.be/7qb3C-lnLX8" target="_blank">Network Analysis with DSE Graph, Studio, and TinkerPop.</a>
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant="subheading">
+                            DataStax Engineering Blog contributor: <a href="https://www.datastax.com/dev/blog/graph-storytelling-with-studio-2-0-0" target="_blank">Graph Storytelling with Studio 2.0.0.</a>
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant="subheading">
+                            Appeared on <a href="https://youtu.be/utyMj3v8GJg" target="_blank">DataStax Distributed Data Show.</a>
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant="subheading">
+                            Educator for 4 units of <a href="https://photos.app.goo.gl/b3hTnE6wryFa3Ztf7" target="_blank">DataStax Academy Graph Course.</a>
+                        </ListText>
+                    </ListItem>
+                </SkillList>
             </SkillContainer>
 
             <SkillDivider />
-            <SkillContainer title="Aurelius" time="2014 - 2015 (Acquired by DataStax)">
+            <SkillContainer title="Aurelius">
                 <SkillBlurb variant="subheading">
-                    Core Developer & Graph Consultant<br />
-                    Projects: Apache TinkerPop, Titan GraphDB (Now Apache Jaunus)<br />
+                    <SkillStrong variant="heading">
+                        2014 - 2015 (Acquired by DataStax)<br />
+                        Core Developer & Graph Consultant<br />
+                        Projects: Apache TinkerPop, Titan GraphDB (Now Apache Jaunus)<br />
+                    </SkillStrong>
                     <br />
-                    As one of just seven developers at Aurelius, the company behind the <a href="http://tinkerpop.apache.org/" target="_blank">Apache TinkerPop</a> Graph Library and <a href="https://thinkaurelius.wordpress.com/team/" target="_blank">Open Source Graph Database, Titan</a>, I wore a lot of hats and participated in many aspects of the Aurelius ecosystem.
+                    As one of just seven developers at Aurelius, the company behind the <a href="http://tinkerpop.apache.org/" target="_blank">Apache TinkerPop</a> Graph Library and <a href="https://thinkaurelius.wordpress.com/team/" target="_blank">Open Source Graph Database, Titan</a>.
+                    I wore a lot of hats and participated in many aspects of the Aurelius ecosystem.
                     Core responsibilities were primarily split between TinkerPop Development and customer consulting services.
                     Customer engagements typically began with an on-site visit (ranging from a few days to a week), followed by a varying duration of remote support, typically a few months.
                 </SkillBlurb>
@@ -243,13 +289,21 @@ const Experience = ({ width }) => (
                         </ListText>
                     </ListItem>
                 </SkillList>
+
+                <TechList>
+                    Technologies: TinkerPop, Titan, Neo4J, Cassandra, ElasticSearch, Java, JavaScript, vis.js, sigma.js, D3, Angular, Spring Framework, JAX-RS, JSON, Junit, Git, YourKit.
+                </TechList>
+
             </SkillContainer>
 
             <SkillDivider />
-            <SkillContainer title="Rovi" time="2013 - 2014">
+            <SkillContainer title="Rovi">
                 <SkillBlurb variant="subheading">
-                    Technical Lead<br />
-                    Project: Search & Recommendation / Data Delivery<br />
+                    <SkillStrong variant="heading">
+                        2013 - 2014<br />
+                        Technical Lead<br />
+                        Project: Search & Recommendation / Data Delivery<br />
+                    </SkillStrong>
                     <br />
                     Rovi (now TiVo) was an entertainment meta-data services company. I participated heavily in the architecture, system configuration, and implementation of Rovi's next generation Search, Recommendation, and Real-Time Data Delivery system.
                 </SkillBlurb>
@@ -290,14 +344,23 @@ const Experience = ({ width }) => (
                         </ListText>
                     </ListItem>
                 </SkillList>
+
+
+                <TechList>
+                    Technologies: Java, MongoDB, Solr, RabbitMQ, Python, Spring, Cassandra, EHCache, Zookeeper, JAX-RS, JSON, Junit, Tomcat, Artifactory, Team City, Subversion, VisualVM.
+                </TechList>
+
             </SkillContainer>
 
             <SkillDivider />
-            <SkillContainer title="ITT Exelis" time="2005 - 2013">
+            <SkillContainer title="ITT Exelis">
                 <SkillBlurb variant="subheading">
-                    Technical Lead <br/>
-                    Project: Scout<br/>
-                    <br/>
+                    <SkillStrong variant="heading">
+                        2005 - 2013<br />
+                        Technical Lead <br />
+                        Project: Scout<br />
+                    </SkillStrong>
+                    <br />
                     Scout is a client-server data visualization application used by Dept of Defense (DoD) analysts for rapid screening and technical analysis of high-bandwidth signal data. Scout began as a research and development project proposed and
                     prototyped by myself, and eventually grew to 4.5 full time engineers. I’m told that analysts still use Scout for mission critical operations on a daily basis because despite there being no new development in nearly 5 years, it’s still the best and fastest spectral processing application available. In addition to my technical duties such as architecting the system and leading the development team, I was also responsible for interacting with “The Customer”, gathering requirements from analysts, proposing new features, managing schedules, and delegating tasks to the development team.
                 </SkillBlurb>
@@ -323,6 +386,11 @@ const Experience = ({ width }) => (
                         </ListText>
                     </ListItem>
                 </SkillList>
+
+                <TechList>
+                    Technologies: Spring Framework, Spring Web MVC, Spring Security, Spring Data, MongoDB, NoSQL, EHCache, JAX-RS, JPA, JSON, JSP, JSTL, HTML, CSS, JQuery, JUnit, JBoss, Gradle, Ivy, Artifactory, Hudson, Subversion, VisualVM.
+                </TechList>
+
             </SkillContainer>
         </SectionContainer>
     </React.Fragment>
