@@ -310,7 +310,7 @@ const Skills = ({ width }) => (
 
                     <ListItem>
                         <ListText variant="subheading">
-                            Strong ability and willingness to get inside the heads of the users.
+                            Strong ability and willingness to get inside the heads of the users to deeply understand their goals, requirements, etc.
                         </ListText>
                     </ListItem>
 
