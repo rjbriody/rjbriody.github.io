@@ -36,7 +36,7 @@ const Intro = ({ width }) => (
             <Grid item>
                 <Blurb variant={isWidthUp('sm', width) ? "display3" : "display1"}>
                     Build the <ColoredText color="#00fff7">right thing</ColoredText>,<br />
-                    the <ColoredText color="#ee3bac">right way</ColoredText>,<br />
+                    a <ColoredText color="#ee3bac">right way</ColoredText>,<br />
                     with <ColoredText color="#ab4cfc">great people</ColoredText>.<br />
                 </Blurb>
             </Grid>
