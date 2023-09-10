@@ -77,14 +77,14 @@ export default () => (
                 </Grid>
                 <Grid item>
                     <Card
-                        text="You really are one of the absolute best engineers I have ever worked with."
-                        author="Coworker"
+                        text="When it comes to soliciting requirements from users, I think you're the best I know."
+                        author="Recent Boss"
                     />
                 </Grid>
                 <Grid item>
                     <Card
                         text="Bob just makes $#.! happen :)"
-                        author="Happy Customer"
+                        author="Happy Customer!"
                     />
                 </Grid>
             </Grid>

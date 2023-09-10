@@ -37,8 +37,8 @@ const App = () => (
       <Intro />
       <Testimonials />
       <About />
-      <Skills />
-      <Experience />
+      {/* <Skills /> */}
+      {/* <Experience /> */}
       <Contact />
       <Footer />
     </MuiThemeProvider>

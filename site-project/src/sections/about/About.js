@@ -52,32 +52,32 @@ const About = ({ width }) => (
                 <ul>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
-                            My approach to software is rooted in user empathy and product focus.
+                            The teams I lead make stuff happen and we have a good time while we’re at it!
                         </ListText>
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
-                            I get stuff done and I have a good time while I'm at it.
+                            My approach to leadership is rooted in empathy, fairness, open communication, and teamwork.
                         </ListText>
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
-                            I'm happy to pitch in wherever I can and I often wear a few different hats, but most of all <strong>I write code</strong>.
+                            My approach to software development is rooted in user empathy and product focus. “Let’s build the right thing!”
                         </ListText>
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
-                            People say that I bring energy, innovation, and focus to every team that I’m a part of.
+                            People say that I bring energy, drive, and focus to every team that I’m a part of.
                         </ListText>
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
-                            The only thing I like better than learning new technology is using boring old tools that just work :)
+                            I am one of the more customer/user/product-focused engineers you will come across.
                         </ListText>
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
-                            I'm at my best when working with a solid team on a challenging project in a fast-paced environment.
+                            My professional goal is pretty simple (to describe): build the right thing, a right way, with great people.
                         </ListText>
                     </ListItem>
                 </ul>
