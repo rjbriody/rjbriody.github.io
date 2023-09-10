@@ -69,12 +69,12 @@ export default class Header extends React.Component {
                         <ListItem button onClick={() => { this.onClick('#about') }}>
                             <ListItemText primary="About" />
                         </ListItem>
-                        <ListItem button onClick={() => { this.onClick('#skills') }}>
+                        {/* <ListItem button onClick={() => { this.onClick('#skills') }}>
                             <ListItemText primary="Areas of Expertise" />
                         </ListItem>
                         <ListItem button onClick={() => { this.onClick('#experience') }}>
                             <ListItemText primary="Professional Experience" />
-                        </ListItem>
+                        </ListItem> */}
                         <ListItem button onClick={() => { this.onClick('#contact') }}>
                             <ListItemText primary="Contact" />
                         </ListItem>
