@@ -57,12 +57,17 @@ const About = ({ width }) => (
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
-                            My approach to leadership is rooted in empathy, fairness, open communication, and teamwork.
+                            My approach to leadership is rooted in empathy, fairness, respect, teamwork, and open communication.
                         </ListText>
                     </ListItem>
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
                             My approach to software development is rooted in user empathy and product focus. “Let’s build the right thing!”
+                        </ListText>
+                    </ListItem>
+                    <ListItem>
+                        <ListText variant={getListTextTypographyVariant(width)}>
+                            Folks on my team can expect to be both challenged and supported, with continuous and candid bi-directional feedback as the keystone operating principle.
                         </ListText>
                     </ListItem>
                     <ListItem>
@@ -73,11 +78,6 @@ const About = ({ width }) => (
                     <ListItem>
                         <ListText variant={getListTextTypographyVariant(width)}>
                             I am one of the more customer/user/product-focused engineers you will come across.
-                        </ListText>
-                    </ListItem>
-                    <ListItem>
-                        <ListText variant={getListTextTypographyVariant(width)}>
-                            My professional goal is pretty simple (to describe): build the right thing, a right way, with great people.
                         </ListText>
                     </ListItem>
                 </ul>
